@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+
+
+.mantine-TextInput-input {
+  background-color: black !important;
+  border: 1px solid #61646C !important;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.mantine-DatePicker-day {
+  &[data-selected] {
+    background-color: #3E3CE1;
+    border-radius: 999px !important;
+    color: white !important;
+  }
+
+  &[data-weekend] {
+    color: black;
+  }
+
+  /* &[data-outside] {
+    .mantine-Indicator-indicator ::before {
+      background-color: grey !important;
+    }
+  } */
+
+}
