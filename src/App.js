@@ -66,7 +66,7 @@ const App = () => {
     );
   };
   return (
-    <div className="w-full h-fit bg-modifiedBlack ">
+    <div className="w-full h-full bg-modifiedBlack ">
       <Layout>
         {/* Backdrop */}
         {calenderOpen && <div className="fixed top-0 left-0 w-full h-full z-10 " onClick={onCalenderClose}></div>}
@@ -92,7 +92,7 @@ const App = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-4 relative">
+                <div className="flex flex-wrap gap-4 relative">
                   <div className="border border-[#D0D5DD] rounded-lg shadow-[0_1px_2px_0_#1018280D]">
                     <button
                       className="text-sm font-semibold text-[#344054] bg-[#F9FAFB] px-4 py-2 border-r rounded-l-lg cursor-pointer h-full"
@@ -137,8 +137,8 @@ const App = () => {
 
                 {/* calender */}
                 {calenderOpen && (
-                  <div className="absolute top-[23%] left-[30%] py-3 z-30 bg-white shadow-[0_20px_24px_-4px_#10182814] border border-[#EAECF0] rounded-xl flex">
-                    <div className="flex flex-col gap-1  px-4 border-r border-[#EAECF0] w-[192px]">
+                  <div className="absolute top-[23%] left-[25%] py-3 z-30 bg-white shadow-[0_20px_24px_-4px_#10182814] border border-[#EAECF0] rounded-xl flex flex-col S lg:flex-row">
+                    <div className="flex flex-wrap lg:flex-col max-w-700px gap-1  px-4 border-b lg:border-r border-[#EAECF0] lg:w-[192px]">
                       <div className="py-2 px-4 text-sm font-medium text-[#344054] cursor-pointer ">Today</div>
                       <div className="py-2 px-4 text-sm font-medium text-[#344054] cursor-pointer">Yesterday</div>
                       <div className="py-2 px-4 text-sm font-medium text-[#344054] cursor-pointer">This week</div>
@@ -204,7 +204,7 @@ const App = () => {
               </div>
 
               {/* section 1  */}
-              <div className="flex gap-6 px-[30px]">
+              <div className="flex flex-col lg:flex-row gap-6 px-[30px]">
                 {/* chart  */}
                 <div className="w-full relative">
                   <div className="absolute flex items-center h-[calc(100%-48px)]">
@@ -228,7 +228,7 @@ const App = () => {
                     <div className="p-4 text-center text-xs font-medium text-[#475467]">7 days</div>
                   </div>
                 </div>
-                <div className="flex flex-col gap-5 w-full max-w-[240px]">
+                <div className="flex justify-around lg:flex-col gap-5 w-full lg:max-w-[240px]">
                   <div className="flex flex-col gap-2 ">
                     <div className="font-medium text-sm text-[#475467] ">Limit</div>
                     <div className="flex gap-1 items-baseline text-[#101828]">
@@ -260,11 +260,11 @@ const App = () => {
               <div className="flex flex-col gap-5 px-[30px]">
                 <div className="text-lg font-semibold text-[#101828] h-[49px] border-b ">Getting started</div>
                 {/* main content  */}
-                <div className="flex gap-6">
+                <div className="flex flex-wrap lg:flex-nowrap gap-6">
                   {/* Section  */}
                   <div className="flex flex-col gap-5 w-full">
                     {/* CTAs  */}
-                    <div className="grid grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
                       <div className="flex justify-between gap-3 p-5 border border-[#EAECF0] rounded-xl shadow-[0_1px_2px_0_#1018280D] cursor-pointer">
                         <div className="w-12">
                           <PlusSvg alt="AvatarSvg" width={48} height={48} className="cursor-pointer" />
@@ -301,7 +301,7 @@ const App = () => {
                         <div className="h-px bg-[#EAECF0]"></div>
                       </div>
                       {/* Blogs  */}
-                      <div className="grid grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                         {/* Blogs 1 */}
                         <div className="flex flex-col gap-5">
                           <img src={Blog1} alt="Blog1" height={240} width={632} />
@@ -364,7 +364,7 @@ const App = () => {
                     </div>
                   </div>
                   {/* side content  */}
-                  <div className="h-full flex flex-col gap-5 w-full max-w-[240px]">
+                  <div className="h-full flex flex-col gap-5 w-full lg:max-w-[240px]">
                     <div className="flex flex-col gap-2 pb-5 border-b border-[#EAECF0]">
                       <div className="flex gap-2.5 justify-between">
                         <div className="text-sm font-medium text-[#475467]">Current Plan</div>
@@ -380,7 +380,7 @@ const App = () => {
                     </div>
                     <div className="flex flex-col gap-5">
                       <div className="text-sm font-medium text-[#475467]">Quantum eMotion’s Organization</div>
-                      <div className="flex flex-col gap-5">
+                      <div className="flex flex-row lg:flex-col flex-wrap gap-5">
                         {UserList.map(({ name, active }, index) => {
                           return (
                             <div className="flex gap-3" key={index}>

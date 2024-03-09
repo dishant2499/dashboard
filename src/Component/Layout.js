@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
   return (
     <div className="flex ">
       {/* sidebar */}
-      <div className="max-w-[312px]  text-lightgrey rounded-tr-[1px] flex-initial">
+      <div className="max-w-[312px] text-lightgrey rounded-tr-[1px] flex-initial">
         <div className="flex flex-col justify-between h-full">
           {/* Header */}
           <div>
