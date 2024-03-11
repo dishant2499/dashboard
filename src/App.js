@@ -408,7 +408,7 @@ const App = () => {
                         <div className="h-px bg-[#EAECF0]"></div>
                       </div>
                       {/* Blogs  */}
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
                         {/* Blogs 1 */}
                         <div className="flex flex-col gap-5">
                           <img
