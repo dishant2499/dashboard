@@ -1,5 +1,5 @@
-import React from 'react';
-import { TextInput } from '@mantine/core';
+import React from "react";
+import { TextInput } from "@mantine/core";
 
 import {
   LogoSvg,
@@ -15,14 +15,14 @@ import {
   PlaySquare,
   SettingSVG,
   UserSvg,
-} from '../assets/svgs';
+} from "../assets/svgs";
 
 const Layout = ({ children }) => {
   return (
     <div className="flex ">
       {/* sidebar */}
-      <div className="max-w-[312px] text-lightgrey rounded-tr-[1px] flex-initial">
-        <div className="flex flex-col justify-between h-full">
+      <div className="max-w-[312px] text-lightgrey rounded-tr-[1px] flex-initial h-screen ">
+        <div className="flex flex-col justify-between h-full shrink overflow-y-scroll overflow-x-hidden hide-scrollerbar">
           {/* Header */}
           <div>
             <div className="flex flex-col pt-10 gap-6 ">
@@ -118,8 +118,12 @@ const Layout = ({ children }) => {
                   OR
                 </div>
                 <div className="text-sm ">
-                  <div className=" font-semibold text-[#CECFD2]">Olivia Rhye</div>
-                  <div className="font-normal  text-[#94969C]">olivia@untitledui.com</div>
+                  <div className=" font-semibold text-[#CECFD2]">
+                    Olivia Rhye
+                  </div>
+                  <div className="font-normal  text-[#94969C]">
+                    olivia@untitledui.com
+                  </div>
                 </div>
               </div>
               <div className="flex w-9 h-9 rounded-lg p-2 cursor-pointer">
